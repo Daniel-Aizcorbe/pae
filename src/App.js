@@ -4,7 +4,7 @@ import { BusquedaPaciente } from './components/buscar-paciente/BusquedaPaciente'
 import { Valoracion } from './components/etapas/Valoracion/Valoracion';
 import { Diagnostico } from './components/etapas/Diagnostico/Diagnostico';
 import { Evolucion } from "./components/evolucion/Evolucion";
-import { Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Planeacion } from './components/etapas/Planeacion/Planeacion';
 import { Ejecucion } from './components/etapas/Ejecucion/Ejecucion';
 import { Evaluacion } from './components/etapas/Evaluacion/Evaluacion';
@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        <Routes basename={process.env.PUBLIC_URL}>
+        <HashRouter >
           <Route exact path="/evolucion/paciente" element={<BusquedaPaciente />} />
           <Route exact path='/registro-paciente' element={<Registro />} />
           <Route exact path="/evolucion" element={<Evolucion />} />
@@ -36,7 +36,7 @@ function App() {
           <Route exact path='/evolucion/finalizar' element={<FinalizarEvolucion />} />
           <Route exact path='/evolucion/ejecucion/acciones' element={<EjecutarAcciones />} />
           <Route exact path='/' element={<Home />} />
-        </Routes>
+        </HashRouter>
       </Provider>
     </div>
   );
