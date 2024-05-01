@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/pae/static/css/main.9c14d57e.css",
+    "main.js": "/pae/static/js/main.00da722b.js",
+    "static/media/cuerpo-humano-mapa.png": "/pae/static/media/cuerpo-humano-mapa.f5f10eb35e4e78b79fe2.png",
+    "static/media/medico.png": "/pae/static/media/medico.39b24546a64944ae7b81.png",
+    "static/media/User.svg": "/pae/static/media/User.16f00d408623e77319073e71bce051db.svg",
+    "static/media/addFileImage.svg": "/pae/static/media/addFileImage.2d9dbe6b7265a3470327e1b6efe16a54.svg",
+    "index.html": "/pae/index.html",
+    "main.9c14d57e.css.map": "/pae/static/css/main.9c14d57e.css.map",
+    "main.00da722b.js.map": "/pae/static/js/main.00da722b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c14d57e.css",
+    "static/js/main.00da722b.js"
+  ]
+}

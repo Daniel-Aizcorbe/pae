@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .contenedor {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #3498db;
+            margin: 50px auto;
+        }
+
+        .boton {
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            background-color: #fff;
+            color: #3498db;
+            text-align: center;
+            line-height: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .contenedor:hover .boton {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+
+        .boton1 { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg); }
+        .boton2 { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(72deg); }
+        .boton3 { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(144deg); }
+        .boton4 { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(216deg); }
+        .boton5 { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(288deg); }
+    </style>
+    <title>Botones alrededor de un Círculo</title>
+</head>
+<body>
+    <div class="contenedor">
+        <button class="boton boton1">Botón 1</button>
+        <button class="boton boton2">Botón 2</button>
+        <button class="boton boton3">Botón 3</button>
+        <button class="boton boton4">Botón 4</button>
+        <button class="boton boton5">Botón 5</button>
+    </div>
+</body>
+</html>
