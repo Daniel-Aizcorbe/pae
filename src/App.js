@@ -23,19 +23,21 @@ function App() {
     <div className="App">
       <Provider store={store}>
         <HashRouter basename={process.env.PUBLIC_URL}>
-          <Route exact path="/evolucion/paciente" element={<BusquedaPaciente />} />
-          <Route exact path='/registro-paciente' element={<Registro />} />
-          <Route exact path="/evolucion" element={<Evolucion />} />
-          <Route exact path='/evolucion/valoracion' element={<Valoracion />} />
-          <Route exact path='/evolucion/diagnostico' element={<Diagnostico />} />
-          <Route exact path='/evolucion/planeacion' element={<Planeacion />} />
-          <Route exact path='/evolucion/ejecucion' element={<Ejecucion />} />
-          <Route exact path='/evolucion/evaluacion' element={<Evaluacion />} />
-          <Route exact path="/evoluciones-anteriores" element={<PantallaNoDisponible seccion={2} />} />
-          <Route exact path='/evolucion/borrador' element={<Borrador />} />
-          <Route exact path='/evolucion/finalizar' element={<FinalizarEvolucion />} />
-          <Route exact path='/evolucion/ejecucion/acciones' element={<EjecutarAcciones />} />
-          <Route exact path='/' element={<Home />} />
+          <Routes>
+            <Route exact path="/evolucion/paciente" element={<BusquedaPaciente />} />
+            <Route exact path='/registro-paciente' element={<Registro />} />
+            <Route exact path="/evolucion" element={<Evolucion />} />
+            <Route exact path='/evolucion/valoracion' element={<Valoracion />} />
+            <Route exact path='/evolucion/diagnostico' element={<Diagnostico />} />
+            <Route exact path='/evolucion/planeacion' element={<Planeacion />} />
+            <Route exact path='/evolucion/ejecucion' element={<Ejecucion />} />
+            <Route exact path='/evolucion/evaluacion' element={<Evaluacion />} />
+            <Route exact path="/evoluciones-anteriores" element={<PantallaNoDisponible seccion={2} />} />
+            <Route exact path='/evolucion/borrador' element={<Borrador />} />
+            <Route exact path='/evolucion/finalizar' element={<FinalizarEvolucion />} />
+            <Route exact path='/evolucion/ejecucion/acciones' element={<EjecutarAcciones />} />
+            <Route exact path='/' element={<Home />} />
+          </Routes>
         </HashRouter>
       </Provider>
     </div>
