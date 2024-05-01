@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        <HashRouter >
+        <HashRouter basename={process.env.PUBLIC_URL}>
           <Route exact path="/evolucion/paciente" element={<BusquedaPaciente />} />
           <Route exact path='/registro-paciente' element={<Registro />} />
           <Route exact path="/evolucion" element={<Evolucion />} />
