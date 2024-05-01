@@ -1,6 +1,7 @@
 {
+  "homepage": "https://daniel-aizcorbe.github.io/pae/",
   "name": "pae",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^5.3.6",
@@ -31,7 +32,9 @@
     "dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && npm run electron\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +62,7 @@
     "concurrently": "^8.2.2",
     "electron": "^30.0.1",
     "electron-builder": "^24.13.3",
+    "gh-pages": "^6.1.1",
     "wait-on": "^7.2.0"
   }
 }
