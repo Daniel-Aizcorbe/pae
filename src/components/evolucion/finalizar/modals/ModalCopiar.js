@@ -1,18 +1,26 @@
 import { Button, Modal, message } from 'antd'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Rows, Columns } from '../../../utils/containers/Containers'
 import { ParrafoEditable } from './ParrafoEditable'
 import { copyToClipboard } from './copyToClipboard'
+import { useSelector } from 'react-redux'
 
 const containerStyle = {
     minHeight: "400px",
 }
 
+const ModalCopiar = ({ open, close }) => {
 
-const ModalCopiar = ({ open, value, close }) => {
+    const etapas = useSelector(state => state.estadoEtapas);
+    let resumen = Object.values(etapas).map(e => e.resumen).join("\n");
 
-    const [editableText, setEditableText] = useState(value);
+    const [editableText, setEditableText] = useState(resumen);
     const [messageApi, contextHolder] = message.useMessage();
+
+    useEffect(() => {
+        // Actualiza editableText cada vez que resumen cambie
+        setEditableText(resumen);
+    }, [resumen]);
 
     const informarError = () => {
         messageApi.error("¡Ups! no se pudo copiar ☹, intentelo manualmente", 3)
@@ -25,6 +33,7 @@ const ModalCopiar = ({ open, value, close }) => {
     const copiar = () => {
         copyToClipboard(editableText, informarSuccess, informarError);
     }
+
     return (
         <Modal
             open={open}
@@ -50,13 +59,12 @@ const ModalCopiar = ({ open, value, close }) => {
                     height="60px"
                     width="70%"
                     elementPosition="bottom-center"
-                    style={{}}
                 >
                     <Button
                         size='large'
                         type='default'
                         style={{ width: "8rem", marginRight: "8rem" }}
-                        onClick={() => setEditableText(value)}
+                        onClick={() => setEditableText(resumen)}
                     >
                         restaurar
                     </Button>

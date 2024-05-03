@@ -3,9 +3,10 @@ import { Columns } from "../utils/containers/Containers";
 import { BusquedaNombrePaciente } from "./BusquedaNombrePaciente";
 import { ModalDatosPaciente } from "./modal/ModalDatosPaciente";
 import { Titulo } from "../utils/Titulos";
-import { message } from "antd";
+import { Button, message } from "antd";
 import { useSelector } from "react-redux";
 import { tieneNombreSimilar } from "./utilsBusqueda";
+import { Link } from "react-router-dom";
 
 const BusquedaPaciente = () => {
 
@@ -77,6 +78,15 @@ const BusquedaPaciente = () => {
                 value={nombreBuscado}
                 onSearch={handleModalPaciente}
             />
+            <Columns>
+                <Link to="/">
+                    <Button
+                        size="large"
+                    >
+                        Volver
+                    </Button>
+                </Link>
+            </Columns>
             <ModalDatosPaciente
                 closeModal={closeModal}
                 openCondition={showModal}

@@ -5,16 +5,10 @@ import { Flex } from "antd";
 import Copiar from "./Copiar";
 import { Finalizar } from "./Finalizar";
 import ContenidoBorrador from "../borrador/ContenidoBorrador";
-import ModalCopiar from "./modals/ModalCopiar";
-import { useSelector } from "react-redux";
-import { getResumenFinal } from "../../etapas/generarResumenes";
 
 const FinalizarEvolucion = () => {
 
     const [showModalCopiar, setShowModalCopiar] = useState(false);
-
-    const etapas = useSelector(state => state.estadoEtapas);
-    const resumenes = Object.values(etapas).map(e => e.resumen);
 
     const abrirModalCopiar = () => {
         setShowModalCopiar(true);
@@ -34,6 +28,8 @@ const FinalizarEvolucion = () => {
                 </Title>
                 <ContenidoBorrador
                     editable={true}
+                    openModal={showModalCopiar}
+                    closeModal={() => setShowModalCopiar(false)}
                 />
                 <Flex
                     justify="space-between"
@@ -45,11 +41,6 @@ const FinalizarEvolucion = () => {
                     />
                     <Finalizar
 
-                    />
-                    <ModalCopiar
-                        open={showModalCopiar}
-                        close={() => setShowModalCopiar(false)}
-                        value={getResumenFinal(resumenes)}
                     />
                 </Flex>
             </Columns>

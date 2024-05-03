@@ -4,10 +4,10 @@ import { Columns } from "../../utils/containers/Containers";
 import { Button } from "antd";
 import { EditTwoTone, SaveTwoTone } from "@ant-design/icons";
 
-const ParrafoEvolucion = ({ text, setText, editable }) => {
+const ParrafoEvolucion = ({ text, setText, editable, saveText, etapa }) => {
 
     const [seEstaEditando, setSeEstaEditando] = useState(false);
-    const [textoTemporal, setTextoTemporal] = useState(text  + "\n");
+    const [textoTemporal, setTextoTemporal] = useState(text + "\n");
 
     const iconoEditable = <EditTwoTone />;
     const iconoGuardar = <SaveTwoTone />;
@@ -18,7 +18,8 @@ const ParrafoEvolucion = ({ text, setText, editable }) => {
 
     const guardar = () => {
         setSeEstaEditando(false);
-        setText(textoTemporal)
+        setText(textoTemporal);
+        saveText(etapa, textoTemporal);
     }
 
     return (
@@ -64,7 +65,7 @@ const ParrafoEvolucion = ({ text, setText, editable }) => {
                         : ""
                 }
             </Columns>
-        </Columns >
+        </Columns>
 
     );
 }

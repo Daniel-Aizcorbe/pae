@@ -1,7 +1,7 @@
 import { Button } from 'antd'
 import React from 'react'
 
-const Copiar = ({openModal}) => {
+const Copiar = ({ openModal }) => {
 
     return (
         <Button

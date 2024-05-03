@@ -8,6 +8,9 @@ const BotonRegistrar = ({ onClick }) => {
             htmlType="submit"
             size='large'
             onClick={onClick}
+            style={{
+                width: "120px"
+            }}
         >
             Registrar
         </Button>

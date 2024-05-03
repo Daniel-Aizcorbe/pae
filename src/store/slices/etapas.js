@@ -25,6 +25,7 @@ const initialState = {
 
 const reducers = {
     completarEtapa: (state, action) => {
+        console.log(action.payload);
         const { etapa, completada, resumen } = action.payload;
         state[etapa].completada = completada;
         state[etapa].resumen = resumen;

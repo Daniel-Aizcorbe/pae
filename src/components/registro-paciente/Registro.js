@@ -6,7 +6,7 @@ import InputNombre from './inputs/InputNombre'
 import InputApellido from './inputs/InputApellido'
 import BotonRegistrar from './BotonRegistrar'
 import InputFecha from './inputs/InputFecha'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { validarApellido, validarFecha, validarNombre } from './inputs/validacionesFormRegistro'
 import { AZUL_PRIMARIO } from '../datos/colores'
 import { useSelector } from 'react-redux'
@@ -16,6 +16,7 @@ import { registrar } from "../../store/slices/pacientesRegistrados";
 import { ModalAvisoRegistro } from './modal/ModalAvisoRegistro'
 import { SUCCED, WARNING, formatDatosPaciente, mensajePacienteRegistrado, mensajeRegistroCompletado } from './utilsRegistro'
 import { getNombreCompletoFormateado } from '../buscar-paciente/utilsBusqueda'
+import { Button, Flex } from 'antd'
 
 const formStyle = {
     width: "600px",
@@ -162,15 +163,29 @@ const Registro = () => {
                         onChange={onChangeBirthDay}
                         error={fechaError}
                     />
-                    <Columns
-                        elementPosition={"bottom-center"}
-                        width="100%"
-                        height="100%"
+                    <Flex
+                        justify='space-between'
+                        align='center'
+                        style={{
+                            height: "100%",
+                            width: "100%",
+                            padding: "4rem"
+                        }}
                     >
+                        <Link to="/">
+                            <Button
+                                size='large'
+                                style={{
+                                    width: "120px"
+                                }}
+                            >
+                                Volver
+                            </Button>
+                        </Link>
                         <BotonRegistrar
                             onClick={continuar}
                         />
-                    </Columns>
+                    </Flex>
                     <ModalAvisoRegistro
                         open={showModal}
                         status={status}
