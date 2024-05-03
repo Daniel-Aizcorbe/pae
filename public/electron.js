@@ -20,7 +20,7 @@ function createWindows() {
         mainWindow = null;
     });
 
-    let direccion = path.join(__dirname, '../public/index.html');
+    let direccion = path.join(__dirname, 'index.html');
     console.log(direccion);
     mainWindow.loadFile(direccion);
 }

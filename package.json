@@ -2,9 +2,10 @@
   "name": "pae",
   "version": "0.1.0",
   "description": "pae demo",
-  "main": "./src/main.js",
+  "main": "public/electron.js",
   "author": "Daniel Aizcorbe",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@ant-design/icons": "^5.3.6",
     "@babel/plugin-transform-class-properties": "^7.24.1",
@@ -34,13 +35,16 @@
     "electron": "electron . --trace-warnings",
     "electron-build": "electron-builder",
     "dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && npm run electron\"",
-    "build": "react-scripts build",
+    "build": "electron-builder",
     "test": "react-scripts test",
     "start2": "react-scripts start",
     "eject": "react-scripts eject",
     "watch": "webpack --config webpack.common.js --watch",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "electron-pack": "build --em.main=build/electron.js",
+    "preelectron-pack": "npm run build"
+
   },
   "eslintConfig": {
     "extends": [
@@ -80,6 +84,7 @@
     "concurrently": "^8.2.2",
     "css-loader": "^7.1.1",
     "electron": "^30.0.1",
+    "electron-builder": "^24.13.3",
     "electron-reload": "^2.0.0-alpha.1",
     "file-loader": "^6.2.0",
     "sass-loader": "^14.2.1",
@@ -87,5 +92,18 @@
     "wait-on": "^7.2.0",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4"
+  },
+  "build": {
+    "appId": "com.pae.demo",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories":{
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": "portable"
+    }
   }
 }
