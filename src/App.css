@@ -1,9 +1,5 @@
-:root {
-  --text-family: "Verdana", san-serif;
-}
-
 * {
-  font-family: var(--text-family);
+  font-family: "Verdana", san-serif;
   box-sizing: border-box;
   user-select: none;
 }

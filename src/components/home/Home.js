@@ -5,6 +5,7 @@ import doctorImage from "./User.svg";
 import documentImage from "./addFileImage.svg"
 
 export const Home = () => {
+    console.log("llegamos al home");
 
     return (
         <Rows
@@ -17,13 +18,13 @@ export const Home = () => {
                 alt={"evolucionar paciente"}
                 title={"Evolucionar"}
                 imgSrc={doctorImage}
-                nextPage={"/evolucion/paciente"}
+                nextPage={"evolucion/paciente"}
             />
             <OptionCard
                 alt={"registrar paciente"}
                 title={"Registrar"}
                 imgSrc={documentImage}
-                nextPage={"/registro-paciente"}
+                nextPage={"registro-paciente"}
             />
         </Rows>
     )

@@ -1,5 +1,5 @@
 import React from 'react'
-import imagen from './cuerpo-humano-mapa.png';
+import imagen from './cuerpoHumanoMapa.png';
 
 const ImagenMapa = ({ disabled, addMarcadores}) => {
     return (
