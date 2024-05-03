@@ -3,7 +3,6 @@ import React from 'react'
 import { evolucionar } from '../../store/slices/paciente';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import "./lista-pacientes.css";
 
 const { v4: uuidv4 } = require('uuid');
 

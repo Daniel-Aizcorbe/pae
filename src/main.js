@@ -11,7 +11,7 @@ function createWindows() {
         maximizable: true,
         webPreferences: {
             nodeIntegration: true,
-            contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+            contentSecurityPolicy: "default-src 'self'; script-src 'self' ; style-src 'self';"
         },
         autoHideMenuBar: true,
     });

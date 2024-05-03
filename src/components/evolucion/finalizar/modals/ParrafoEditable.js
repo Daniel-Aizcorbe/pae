@@ -1,6 +1,5 @@
 import TextArea from 'antd/es/input/TextArea';
 import React from 'react'
-import "./textarea-copyable.css"
 
 export const ParrafoEditable = ({ editableText, setEditableText }) => {
 

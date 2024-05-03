@@ -5,7 +5,6 @@ import doctorImage from "./User.svg";
 import documentImage from "./addFileImage.svg"
 
 export const Home = () => {
-    console.log("llegamos al home");
 
     return (
         <Rows

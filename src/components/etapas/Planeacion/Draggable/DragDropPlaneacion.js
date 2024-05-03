@@ -3,7 +3,6 @@ import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import { Columns, Rows } from "../../../utils/containers/Containers";
 import ItemDraggable from "./ItemDraggable";
 
-import "./dragdropstyles.css";
 import { DragDropContainer } from "./DragDropContainer";
 
 

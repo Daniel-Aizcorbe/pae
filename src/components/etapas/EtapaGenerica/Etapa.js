@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 
 import { message } from 'antd';
 
-import "./etapa.css";
 import BotonIngresarEtapa from './BotonIngresarEtapa';
 import { BotonEtapaDeshabilitado } from './BotonEtapaDeshabilitado';
 import { AZUL_PRIMARIO, VERDE } from '../../datos/colores';

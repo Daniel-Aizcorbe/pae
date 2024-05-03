@@ -133,15 +133,15 @@ const Registro = () => {
 
     return (
         <ContentContainer>
-            <Title level={1}>
-                REGISTRAR PACIENTE
-            </Title>
             <Columns
-                elementPosition={"top-center"}
+                elementPosition={"center"}
                 padding={"3rem"}
                 width="100%"
                 height="100%"
             >
+                <Title level={1} style={{marginBottom: "3rem"}}>
+                    REGISTRAR PACIENTE
+                </Title>
                 <Columns
                     width="100%"
                     height="100%"
