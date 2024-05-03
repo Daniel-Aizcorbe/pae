@@ -1,0 +1,135 @@
+* {
+    font-family: "Verdana", san-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+
+.App {
+    width: 100%;
+    height: 100%;
+}
+
+.lista-pacientes::-webkit-scrollbar {
+    width: 3px;
+    /* ancho de la barra */
+}
+
+.lista-pacientes::-webkit-scrollbar-track {
+    background: #FFFFFF;
+    /* color del fondo de la barra de desplazamiento */
+}
+
+.lista-pacientes::-webkit-scrollbar-thumb {
+    background: #007EA7;
+    /* color del pulgar */
+}
+
+.etapa {
+    margin: 0 2.5rem;
+    width: 12rem;
+    height: 7rem;
+    clip-path: polygon(0 0, 100% 0, 85% 60%, 15% 60%);
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border: none;
+    position: absolute;
+}
+
+.etapa:hover {
+    color: white;
+}
+
+.etapa p {
+    padding: 0.5rem;
+}
+
+.valoracion {
+    bottom: 50px;
+}
+
+.diagnostico {
+    left: -20px;
+    bottom: -40px;
+    transform: rotate(75deg);
+}
+
+.planeacion {
+    left: -70px;
+    top: 60px;
+    transform: rotate(-220deg);
+}
+
+.ejecucion {
+    right: -70px;
+    top: 60px;
+    transform: rotate(220deg);
+}
+
+.evaluacion {
+    right: -20px;
+    bottom: -40px;
+    transform: rotate(-75deg);
+}
+
+.dragdrop-container {
+    border-radius: 1rem;
+    padding: 1rem;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.dragdrop-container::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    opacity: 0;
+}
+
+.dragdrop-container::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+.dragdrop-item {
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #4E666E;
+    color: white;
+}
+
+.copyable::-webkit-scrollbar {
+    width: 3px;
+    /* ancho de la barra */
+}
+
+.copyable::-webkit-scrollbar-track {
+    background: #FFFFFF;
+    /* color del fondo de la barra de desplazamiento */
+}
+
+.copyable::-webkit-scrollbar-thumb {
+    background: #007EA7;
+    /* color del pulgar */
+}
