@@ -16,7 +16,7 @@ const reducers = {
 
 const pacientesRegistradosSlice = createSlice({
     name: "pacientesRegistrados",
-    initialState: pacientes,
+    initialState: [],
     reducers: reducers
 })
 
