@@ -36,6 +36,7 @@
     "dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && npm run electron\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "start2": "react-scripts start",
     "eject": "react-scripts eject",
     "watch": "webpack --config webpack.common.js --watch",
     "package": "electron-forge package",
