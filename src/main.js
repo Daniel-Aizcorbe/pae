@@ -13,7 +13,7 @@ function createWindows() {
             nodeIntegration: true,
             contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
         },
-        autoHideMenuBar: false,
+        autoHideMenuBar: true,
     });
 
     mainWindow.on('closed', function () {
